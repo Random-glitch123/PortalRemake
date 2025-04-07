@@ -1,0 +1,66 @@
+# Textures Directory
+
+Place texture files in this directory. The game supports the following formats:
+- PNG (.png) - Best for images with transparency
+- JPEG (.jpg) - Good for photos and backgrounds
+- BMP (.bmp) - Simple format with no compression
+
+## Recommended Textures
+
+For a basic portal game, you might want to create or download the following textures:
+
+1. Wall textures:
+   - wall_concrete.png - Standard wall texture
+   - wall_metal.png - Metal wall texture
+   - wall_tile.png - Tiled wall texture
+
+2. Floor/Ceiling textures:
+   - floor_concrete.png - Standard floor texture
+   - floor_metal.png - Metal floor texture
+   - ceiling_tile.png - Ceiling texture
+
+3. Portal textures:
+   - portal_blue_rim.png - Blue portal edge texture
+   - portal_orange_rim.png - Orange portal edge texture
+   - portal_effect.png - Portal swirl effect
+
+4. Special textures:
+   - goal_texture.png - Texture for the goal object
+   - button_texture.png - Texture for buttons
+   - crosshair.png - Crosshair texture
+
+## Texture Sizes
+
+For best performance, use texture sizes that are powers of 2:
+- 128x128
+- 256x256
+- 512x512
+- 1024x1024
+
+This helps with OpenGL's texture mapping and mipmapping.
+
+## Adding Textures to the Game
+
+To add a texture to the game, you'll need to:
+
+1. Place the texture file in this directory
+2. Load it in the game code
+3. Apply it to the appropriate objects
+
+Example code for loading a texture:
+
+```python
+def load_texture(filename):
+    texture_surface = pygame.image.load(f"assets/textures/{filename}")
+    texture_data = pygame.image.tostring(texture_surface, "RGBA", 1)
+    width, height = texture_surface.get_size()
+    
+    texture_id = glGenTextures(1)
+    glBindTexture(GL_TEXTURE_2D, texture_id)
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, texture_data)
+    
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR)
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR)
+    
+    return texture_id
+```

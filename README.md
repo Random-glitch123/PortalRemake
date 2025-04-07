@@ -1,10 +1,142 @@
-# PortalRemake
+# 3D Portal Puzzle Game
 
-Based on the game made by Valve set in the Half-life universe, Portal.
+A 3D puzzle game inspired by Portal, built with Python, Pygame, and OpenGL.
 
-Made in my basement using pygame and having too much time on my hands.
-Feel free to suggest any improvements and/or fix them your self.
+## Features
 
-Please download Pygame and OpenGL or run the 2 batch installer scripts. (I know it looks sketchy)
+- First-person 3D gameplay
+- Portal mechanics for teleportation
+- Physics-based movement and collision detection
+- Dynamic lighting effects
+- Interactive puzzles
 
-*When I was choosing the license, I just pressed something random please... Please tell me if I chose the wrong one*
+## Controls
+
+- **WASD**: Move around (slower movement speed)
+- **Mouse**: Look around (inverted up/down controls)
+- **Space**: Jump
+- **Left Click**: Place Blue Portal
+- **Right Click**: Place Orange Portal
+- **R**: Reset Level
+- **ESC**: Exit Game
+
+## Requirements
+
+- Python 3.x
+- Pygame
+- PyOpenGL
+- NumPy
+
+## Installation
+
+1. Clone this repository
+2. Install the required packages:
+   ```
+   pip install pygame PyOpenGL numpy
+   ```
+3. Run the game:
+   ```
+   python Portal3D.py
+   ```
+
+## Development
+
+This project is under active development. Feel free to contribute by submitting pull requests or reporting issues.
+
+## License
+
+This project is open source and available under the MIT License.# 3D Portal Puzzle Game
+
+A 3D puzzle game inspired by Portal, built with Python, Pygame, and OpenGL.
+
+## Features
+
+- First-person 3D gameplay
+- Portal mechanics for teleportation
+- Physics-based movement and collision detection
+- Dynamic lighting effects
+- Interactive puzzles
+
+## Controls
+
+- **WASD**: Move around
+- **Mouse**: Look around
+- **Space**: Jump
+- **Left Click**: Place Blue Portal
+- **Right Click**: Place Orange Portal
+- **R**: Reset Level
+- **ESC**: Exit Game
+
+## Requirements
+
+- Python 3.x
+- Pygame
+- PyOpenGL
+- NumPy
+
+## Installation
+
+1. Clone this repository
+2. Install the required packages:
+   ```
+   pip install pygame PyOpenGL numpy
+   ```
+3. Run the game:
+   ```
+   python Portal3D.py
+   ```
+
+## Development
+
+This project is under active development. Feel free to contribute by submitting pull requests or reporting issues.
+
+## License
+
+This project is open source and available under the MIT License.# 3D Portal Puzzle Game
+
+A 3D puzzle game inspired by Portal, built with Python, Pygame, and OpenGL.
+
+## Features
+
+- First-person 3D gameplay
+- Portal mechanics for teleportation
+- Physics-based movement and collision detection
+- Dynamic lighting effects
+- Interactive puzzles
+
+## Controls
+
+- **WASD**: Move around
+- **Mouse**: Look around
+- **Space**: Jump
+- **Left Click**: Place Blue Portal
+- **Right Click**: Place Orange Portal
+- **R**: Reset Level
+- **ESC**: Exit Game
+
+## Requirements
+
+- Python 3.x
+- Pygame
+- PyOpenGL
+- NumPy
+
+## Installation
+
+1. Clone this repository
+2. Install the required packages:
+   ```
+   pip install pygame PyOpenGL numpy
+   ```
+3. Run the game:
+   ```
+   python Portal3D.py
+   ```
+
+## Development
+
+This project is under active development. Feel free to contribute by submitting pull requests or reporting issues.
+
+## License
+
+This project is open source and available under the MIT License.

@@ -1,0 +1,80 @@
+# Assets Directory
+
+This directory is for storing textures, sounds, and other assets for the Portal Game.
+
+## Textures
+
+Place texture files in the `textures` subdirectory. Supported formats include:
+- PNG (.png) - Best for images with transparency
+- JPEG (.jpg) - Good for photos and backgrounds
+- BMP (.bmp) - Simple format with no compression
+
+Example structure:
+```
+assets/
+  textures/
+    wall.png
+    floor.png
+    ceiling.png
+    portal_blue.png
+    portal_orange.png
+```
+
+## Sounds
+
+Place sound files in the `sounds` subdirectory. Supported formats include:
+- WAV (.wav) - Uncompressed audio, good quality
+- OGG (.ogg) - Compressed format, good for music
+- MP3 (.mp3) - Common compressed format
+
+Example structure:
+```
+assets/
+  sounds/
+    portal_open.wav
+    portal_close.wav
+    teleport.wav
+    background_music.ogg
+```
+
+## Models
+
+Place 3D model files in the `models` subdirectory. Supported formats depend on what loaders you implement, but common ones include:
+- OBJ (.obj) - Simple format for 3D models
+- FBX (.fbx) - More complex format with animations
+
+Example structure:
+```
+assets/
+  models/
+    portal_gun.obj
+    companion_cube.obj
+```
+
+## How to Use Assets in the Game
+
+To use these assets in the game, you'll need to:
+
+1. Load the textures using pygame:
+```python
+texture = pygame.image.load('assets/textures/wall.png')
+```
+
+2. Convert to OpenGL textures:
+```python
+texture_data = pygame.image.tostring(texture, 'RGBA', 1)
+width, height = texture.get_size()
+texture_id = glGenTextures(1)
+glBindTexture(GL_TEXTURE_2D, texture_id)
+glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, texture_data)
+glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR)
+glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR)
+```
+
+3. Apply to objects when drawing:
+```python
+glEnable(GL_TEXTURE_2D)
+glBindTexture(GL_TEXTURE_2D, texture_id)
+# Draw your textured object here
+glDisable(GL_TEXTURE_2D)
+```

@@ -1,0 +1,51 @@
+# Sounds Directory
+
+Place sound files in this directory. The game supports the following formats:
+- WAV (.wav) - Uncompressed audio, good quality
+- OGG (.ogg) - Compressed format, good for music
+- MP3 (.mp3) - Common compressed format
+
+## Recommended Sounds
+
+For a basic portal game, you might want to create or download the following sounds:
+
+1. Portal sounds:
+   - portal_open_blue.wav - Sound when creating a blue portal
+   - portal_open_orange.wav - Sound when creating an orange portal
+   - portal_enter.wav - Sound when entering a portal
+   - portal_exit.wav - Sound when exiting a portal
+
+2. Player sounds:
+   - footstep.wav - Footstep sound
+   - jump.wav - Jump sound
+   - land.wav - Landing sound
+
+3. Game sounds:
+   - level_complete.wav - Sound when completing a level
+   - button_press.wav - Sound when pressing a button
+   - error.wav - Sound when an action fails
+
+4. Music:
+   - background_music.ogg - Background music for the game
+
+## Adding Sounds to the Game
+
+To add a sound to the game, you'll need to:
+
+1. Place the sound file in this directory
+2. Load it in the game code
+3. Play it at the appropriate times
+
+Example code for loading and playing a sound:
+
+```python
+def load_sound(filename):
+    return pygame.mixer.Sound(f"assets/sounds/{filename}")
+
+# Load sounds
+portal_open_sound = load_sound("portal_open_blue.wav")
+portal_enter_sound = load_sound("portal_enter.wav")
+
+# Play a sound
+portal_open_sound.play()
+```
