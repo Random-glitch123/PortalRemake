@@ -1,0 +1,43 @@
+# Portal Game Debug Keybinds
+# This file lists all debug keybinds added during development
+# These should be removed or disabled before final release
+
+## Debug Movement & Level Controls
+N - Advance to next level (works even if level is not complete)
+C - Force mark current level as complete (debug only)
+O - Force open all doors in the current level (debug only)
+R - Reset current level
+
+## Graphics & Performance Controls
+L - Toggle enhanced lighting
+T - Toggle tessellation
++ / = - Increase tessellation level
+- - Decrease tessellation level
+F11 - Toggle fullscreen mode
+P - Print performance report
+
+## Debug Information
+- Wall collision detection now prints debug information when collisions occur
+- Door collision detection now prints debug information when collisions occur
+- Portal clipping planes now print debug information when set up
+
+## Debug Code Locations
+1. handle_events() method - Added debug key 'C' to force level completion
+2. check_collision() methods - Added debug print statements
+3. Portal rendering code - Added debug print statements for clipping planes
+4. next_level() method - Added debug print statements
+
+## How to Remove Debug Features
+1. Remove the 'C' key handling in handle_events()
+2. Remove debug print statements from collision detection methods
+3. Remove debug print statements from portal rendering code
+4. Consider making 'N' key only work when level is actually complete
+5. Consider removing performance report key or making it a hidden feature
+
+## Notes
+These debug features were added to help diagnose and fix issues with:
+- Wall clipping
+- Portal rendering
+- Level transitions
+
+Once these issues are fully resolved in testing, the debug features can be safely removed.
